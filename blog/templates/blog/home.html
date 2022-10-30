@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-</head>
-<body>
-<h1>Home Page !</h1>
-</body>
-</html>
+{% extends "blog/application.html" %}
+
+{% block content %}
+	{% for post in posts %}
+		<b>{{post.Title}}</b>
+		<p>{{post.Descreption}}</p>
+		<i>{{post.post_date}}</i>
+		<p>By : {{post.authors}}</p>
+		<hr>
+	{% endfor %}
+{% endblock content %}
